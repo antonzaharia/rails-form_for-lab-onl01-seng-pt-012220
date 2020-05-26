@@ -18,6 +18,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def edit
+    @school_class = ScoolClass.find(:id)
   end
 
   def update
