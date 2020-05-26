@@ -12,6 +12,8 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
+    @school_class = SchoolClass.new
+
   end
 
   def edit
@@ -19,4 +21,9 @@ class SchoolClassesController < ApplicationController
 
   def update
   end
+
+  private
+    def post_params
+      params.require(:school_class).permit(:title, :room_number)
+    end
 end
