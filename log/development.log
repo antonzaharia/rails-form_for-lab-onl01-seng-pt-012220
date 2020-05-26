@@ -1363,3 +1363,27 @@ Processing by SchoolClassesController#show as HTML
 Completed 200 OK in 31ms (Views: 24.2ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/school_classes/2/edit" for 194.53.184.62 at 2020-05-26 16:26:16 +0000
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/2" for 194.53.184.62 at 2020-05-26 16:26:19 +0000
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RxYF6kiWmZlDJKczK8nlrNoeTSyBLdH8ea2EELYxuEY7VnF6OjWdaXW41n/gC6CmTu63t2LekxEqdhJfIO+lrg==", "school_class"=>{"title"=>"clasa", "room_number"=>"6"}, "commit"=>"Update School class", "id"=>"2"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "school_classes" SET "room_number" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", 6], ["id", 2]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 7.9ms)
+
+
+  
+NoMethodError (undefined method `reditect_to' for #<SchoolClassesController:0x00007ff454e1ea88>
+Did you mean?  redirect_to):
+  
+app/controllers/school_classes_controller.rb:27:in `update'
