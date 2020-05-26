@@ -18,11 +18,11 @@ class SchoolClassesController < ApplicationController
   end
 
   def edit
-    @school_class = ScoolClass.find(params[:id])
+    @school_class = SchoolClass.find(params[:id])
   end
 
   def update
-    @school_class = ScoolClass.find(params[:id])
+    @school_class = SchoolClass.find(params[:id])
     @school_class.update(post_params(:title, :room_number))
     reditect_to school_class_path(@school_class)
   end
