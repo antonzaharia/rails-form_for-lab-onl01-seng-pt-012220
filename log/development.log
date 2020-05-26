@@ -754,3 +754,23 @@ Processing by StudentsController#edit as HTML
 Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/students/3/edit" for 194.53.184.62 at 2020-05-26 16:02:05 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/students/3" for 194.53.184.62 at 2020-05-26 16:02:15 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CBH4ARcs1HLz427+0Ckr2q4bmg6JaxAzlCKfaiWdBm50UYyRZY/QgsV/H7Ib627QOutglWqYUt7H+Qkls0Mbhg==", "student"=>{"first_name"=>"Floci edited", "last_name"=>"Flocescu edited"}, "commit"=>"Update Student", "id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "students" SET "first_name" = ?, "last_name" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["first_name", "Floci edited"], ["last_name", "Flocescu edited"], ["updated_at", "2020-05-26 16:02:15.227931"], ["id", 3]]
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://207.154.221.6:47360/students/3
+Completed 302 Found in 86ms (ActiveRecord: 82.2ms)
+
+
