@@ -11,6 +11,7 @@ class StudentController < ApplicationController
   end
 
   def create
+    @student = Student.new()
   end
 
   def edit
@@ -18,4 +19,9 @@ class StudentController < ApplicationController
 
   def update
   end
+
+  private
+
+    def post_params(*args)
+      params.require(:student).permit(args)
 end
