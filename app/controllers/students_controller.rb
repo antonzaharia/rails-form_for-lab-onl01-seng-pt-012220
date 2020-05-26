@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(post_params(:first_name, :last_name))
     @student.save
-    redirect_to student_pats(@student)
+    redirect_to students_pats(@student)
   end
 
   def edit
