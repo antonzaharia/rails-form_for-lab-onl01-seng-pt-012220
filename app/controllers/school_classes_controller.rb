@@ -12,8 +12,8 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    @school_class = SchoolClass.new
-
+    @school_class = SchoolClass.new(post_params)
+    @schoo_class.save
   end
 
   def edit
