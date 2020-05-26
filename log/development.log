@@ -674,3 +674,22 @@ app/views/students/new.html.erb:2:in `_app_views_students_new_html_erb__28353791
 Started GET "/students/new" for 194.53.184.62 at 2020-05-26 15:58:20 +0000
 Processing by StudentsController#new as HTML
   Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 248ms (Views: 240.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/students" for 194.53.184.62 at 2020-05-26 15:58:33 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1+IZLpykgxoz2Y9yPs6hGkKvP5EXgUbQAcLR6b9FPZ+rom2+7geH6gVF/j71DOQQ1l/FCvRyBD1SGUemKZsgdw==", "student"=>{"first_name"=>"Floci", "last_name"=>"Flocescu"}, "commit"=>"Create Student"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Floci"], ["last_name", "Flocescu"], ["created_at", "2020-05-26 15:58:33.644978"], ["updated_at", "2020-05-26 15:58:33.644978"]]
+  [1m[35m (62.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 63.3ms)
+
+
+  
+NoMethodError (undefined method `student_pats' for #<StudentsController:0x00007fccbd5fb0b8>
+Did you mean?  student_path
+               students_path):
+  
+app/controllers/students_controller.rb:15:in `create'
