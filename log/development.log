@@ -791,3 +791,12 @@ Processing by StudentsController#index as HTML
 Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/students/3" for 194.53.184.62 at 2020-05-26 16:02:23 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
