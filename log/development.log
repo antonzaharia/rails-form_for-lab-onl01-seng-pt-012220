@@ -1405,3 +1405,32 @@ Redirected to http://207.154.221.6:47360/school_classes/2
 Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
 
 
+Started GET "/school_classes/2" for 194.53.184.62 at 2020-05-26 16:26:43 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/2/edit" for 194.53.184.62 at 2020-05-26 16:26:48 +0000
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/2" for 194.53.184.62 at 2020-05-26 16:27:01 +0000
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eHEbw+AIf1XIkREaYzeXeRrJ/HNzte5TWHjrHXmWfqEEMW9Tkqt7pf4NYFao9dJzjjkG6JBGrL4Lo31S70hjSQ==", "school_class"=>{"title"=>"Class", "room_number"=>"22"}, "commit"=>"Update School class", "id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "school_classes" SET "title" = ?, "room_number" = ? WHERE "school_classes"."id" = ?[0m  [["title", "Class"], ["room_number", 22], ["id", 2]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://207.154.221.6:47360/school_classes/2
+Completed 302 Found in 34ms (ActiveRecord: 10.2ms)
+
+
