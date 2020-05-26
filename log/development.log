@@ -1307,3 +1307,13 @@ Processing by SchoolClassesController#show as HTML
 Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/school_classes/2/edit" for 194.53.184.62 at 2020-05-26 16:24:58 +0000
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SchoolClassesController::ScoolClass):
+  
+app/controllers/school_classes_controller.rb:21:in `edit'
