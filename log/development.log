@@ -623,3 +623,19 @@ app/controllers/students_controller.rb:9:in `new'
   Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+Started GET "/students/new" for 194.53.184.62 at 2020-05-26 15:55:23 +0000
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Student From</h1>
+    2: <%= form_for(@student) do |f| %>
+    3: <%= f.label "Student First Name" %>
+    4: <%= f.text_field :first_name %><br>
+    5: 
+  
+app/views/students/new.html.erb:2:in `_app_views_students_new_html_erb__2835379163983054016_27416140'
