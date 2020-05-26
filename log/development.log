@@ -671,3 +671,6 @@ app/views/students/new.html.erb:2:in `_app_views_students_new_html_erb__28353791
   Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.1ms)
+Started GET "/students/new" for 194.53.184.62 at 2020-05-26 15:58:20 +0000
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
